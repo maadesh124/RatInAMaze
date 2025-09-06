@@ -21,7 +21,7 @@ const Home = ({ setState, maze, ans }) => {
             <p className={`${color1}`}>no. of rows</p>
             <input
               type="text"
-              className={` border-2 border-[#DDF4E7] rounded-sm w-[50px]`}
+              className={`text-[#DDF4E7]  border-2 border-[#DDF4E7] rounded-sm w-[50px]`}
               placeholder="0"
               onChange={e => (dim.current[0] = e.target.value)}
             />
@@ -30,7 +30,7 @@ const Home = ({ setState, maze, ans }) => {
             <p className={`${color1}`}>no. of cols</p>
             <input
               type="text"
-              className=" border-2 border-[#67C090] rounded-sm w-[50px]"
+              className="text-[#DDF4E7]  border-2 border-[#DDF4E7] rounded-sm w-[50px]"
               placeholder="0"
               onChange={e => (dim.current[1] = e.target.value)}
             />
