@@ -1,10 +1,10 @@
 function createGrid(m, n) {
+  //console.log(`m n ${m} ${n} ${typeof m}`);
   let arr = new Array(m);
   let ans = new Array(m);
   for (let i = 0; i < m; i++) {
     arr[i] = new Array(n).fill(1);
     ans[i] = new Array(n).fill(1);
-    console.log(arr[i]);
   }
   carveRandomPath(arr);
   for (let i = 0; i < m; i++) for (let j = 0; j < n; j++) ans[i][j] = arr[i][j];
