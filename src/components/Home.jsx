@@ -6,12 +6,12 @@ import Popup from "./Popup";
 
 const Home = ({ setState, maze, ans }) => {
   const dim = useRef([0, 0]);
-  const color1 = "text-[#0D1164]";
+  const color1 = "text-[#DDF4E7]";
 
   return (
     <div className="absolute inset-0 z-10">
       <div
-        className="bg-gray-200/20 p-4 rounded-lg 
+        className="bg-gray-200/0 p-4 rounded-lg 
           absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col
           items-center gap-4"
       >
@@ -21,7 +21,7 @@ const Home = ({ setState, maze, ans }) => {
             <p className={`${color1}`}>no. of rows</p>
             <input
               type="text"
-              className=" border-2 border-gray-600 rounded-sm w-[50px]"
+              className={` border-2 border-[#DDF4E7] rounded-sm w-[50px]`}
               placeholder="0"
               onChange={e => (dim.current[0] = e.target.value)}
             />
@@ -30,7 +30,7 @@ const Home = ({ setState, maze, ans }) => {
             <p className={`${color1}`}>no. of cols</p>
             <input
               type="text"
-              className=" border-2 border-gray-600 rounded-sm w-[50px]"
+              className=" border-2 border-[#67C090] rounded-sm w-[50px]"
               placeholder="0"
               onChange={e => (dim.current[1] = e.target.value)}
             />

@@ -9,10 +9,10 @@ function Square({ pathP, initialState, pos, setState, dst, disabled }) {
 
   //console.log(`rec path=${path} pos=${pos} `);
 
-  if (square === 0) color = "bg-white";
-  else if (square === 1) color = "bg-[#26667F]";
-  else if (square === 2) color = "bg-[#67C090]";
-  else if (square === 3) color = "bg-[#FFD93D]";
+  if (square === 0) color = "bg-[#DDF4E7]";
+  else if (square === 1) color = "bg-[#0D1164]";
+  else if (square === 2) color = "bg-[#08CB00]";
+  else if (square === 3) color = "bg-[#FFEA00]";
 
   //console.log(`pos-${pos} color=${color}`);
   return (

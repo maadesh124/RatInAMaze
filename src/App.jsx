@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import reactLogo from "./assets/react.svg";
+import bg1 from "./assets/bg1.jpg";
+import bg from "./assets/bg.jpeg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Square from "./components/Square";
@@ -19,7 +21,11 @@ function App() {
       <div className="relative min-h-screen flex items-center justify-center p-6">
         {/* Background layers */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#DDF4E7] via-[#67C090] to-[#124170]"></div>
+          <img
+            src={bg1}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
           {/* You can add more background divs or decorations here */}
         </div>
 

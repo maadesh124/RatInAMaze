@@ -25,7 +25,7 @@ const Maze = ({ maze, setState, disabled }) => {
 
   return (
     <div
-      className="grid bg-[#DDF4E7] rounded-lg p-6 w-fit"
+      className="grid bg-gray-100/10 rounded-lg p-6 w-fit"
       style={{
         gridTemplateColumns: `repeat(${n}, 50px)`,
         gridTemplateRows: `repeat(${m}, 50px)`
