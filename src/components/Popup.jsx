@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Popup({ Component, maze, setIsOpen }) {
+function Popup({ Component, maze, setState }) {
   //const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -8,14 +8,14 @@ function Popup({ Component, maze, setIsOpen }) {
       <div className="flex flex-col w-fit transform  -translate-y-[10px]">
         <div className="flex flex-row justify-end">
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={() => setState(0)}
             className=" text-gray-100 text-5xl font-bold w-fit justify-end"
           >
             ×
           </button>
         </div>
         <div className="py-5 px-10">
-          <Component maze={maze} setIsOpen={setIsOpen} />{" "}
+          <Component maze={maze} setState={setState} />{" "}
         </div>
       </div>
     </div>

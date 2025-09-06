@@ -1,44 +1,46 @@
 import React from "react";
 import { useState } from "react"; // needed in Square
 
-function Square({ pathP, initialState, pos, setIsOpen, dst }) {
-  const [state, setstate] = useState(initialState);
+function Square({ pathP, initialState, pos, setState, dst, disabled }) {
+  const [square, setSquare] = useState(initialState);
   let path = pathP.current;
   let n = path.length;
   let color;
 
   //console.log(`rec path=${path} pos=${pos} `);
 
-  if (state === 0) color = "bg-white";
-  else if (state === 1) color = "bg-[#26667F]";
-  else if (state === 2) color = "bg-[#67C090]";
-  else if (state === 3) color = "bg-[#FFD93D]";
+  if (square === 0) color = "bg-white";
+  else if (square === 1) color = "bg-[#26667F]";
+  else if (square === 2) color = "bg-[#67C090]";
+  else if (square === 3) color = "bg-[#FFD93D]";
 
   //console.log(`pos-${pos} color=${color}`);
   return (
     <button
       onClick={() => {
-        onClick(state, path, pos, setstate);
-        if (
-          path[path.length - 1][0] === dst[0] &&
-          path[path.length - 1][1] === dst[1]
-        )
-          setIsOpen(false);
+        if (!disabled) {
+          onClick(square, path, pos, setSquare);
+          if (
+            path[path.length - 1][0] === dst[0] &&
+            path[path.length - 1][1] === dst[1]
+          )
+            setState(2);
+        }
       }}
       className={`${color} w-[50px] h-[50px] rounded-[20%]`}
     ></button>
   );
 }
 
-function onClick(state, path, pos, setstate) {
+function onClick(state, path, pos, setSquare) {
   let n = path.length;
   if (isNgb(pos, path[n - 1]) && (state === 0 || state === 3)) {
-    setstate(2);
+    setSquare(2);
     path.push(pos);
   }
   if (pos[0] == path[n - 1][0] && pos[1] == path[n - 1][1]) {
     if (path.length <= 1) return;
-    setstate(0);
+    setSquare(0);
     path.pop();
   }
 

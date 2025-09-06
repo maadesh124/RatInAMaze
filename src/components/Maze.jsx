@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Square from "./Square";
 
-const Maze = ({ maze, setIsOpen }) => {
+const Maze = ({ maze, setState, disabled }) => {
   const path = useRef([[0, 0]]);
   let pos = [1, 0];
   let m = maze.length;
@@ -16,7 +16,8 @@ const Maze = ({ maze, setIsOpen }) => {
           pos={[i, j]}
           initialState={maze[i][j]}
           dst={[m - 1, n - 1]}
-          setIsOpen={setIsOpen}
+          setState={setState}
+          disabled={disabled}
         />
       );
     }
@@ -24,7 +25,7 @@ const Maze = ({ maze, setIsOpen }) => {
 
   return (
     <div
-      className="grid bg-[#DDF4E7] rounded-lg p-6"
+      className="grid bg-[#DDF4E7] rounded-lg p-6 w-fit"
       style={{
         gridTemplateColumns: `repeat(${n}, 50px)`,
         gridTemplateRows: `repeat(${m}, 50px)`
