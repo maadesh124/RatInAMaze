@@ -1,4 +1,4 @@
-# Ratina Maze
+# Rat In a Maze
 
 Ratina Maze is a **React + Tailwind CSS** project that displays an interactive maze. Users can view a grid of squares representing the maze, with obstacles and paths, and interact with it. The project is deployed as a static site on [Render](https://ratinamaze-vjrz.onrender.com).
 
