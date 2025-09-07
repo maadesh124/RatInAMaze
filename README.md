@@ -15,4 +15,5 @@ Ratina Maze is a **React + Tailwind CSS** project that displays an interactive m
 ```bash
 git clone https://github.com/maadesh124/RatInAMaze.git
 cd RatInAMaze
+npm install
 ```
