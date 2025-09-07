@@ -1,12 +1,18 @@
-# React + Vite
+# Ratina Maze
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ratina Maze is a **React + Tailwind CSS** project that displays an interactive maze. Users can view a grid of squares representing the maze, with obstacles and paths, and interact with it. The project is deployed as a static site on [Render](https://ratinamaze-vjrz.onrender.com).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+[View the live site here](https://ratinamaze-vjrz.onrender.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Setup & Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/maadesh124/RatInAMaze.git
+cd RatInAMaze
+```
